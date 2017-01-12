@@ -1,0 +1,13 @@
+{
+  "name": "tabFocus",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Sander Elias <sanderelias+git@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "live-server --port=4123 --ignore=node_modules"
+  },
+  "dependencies": {
+    "live-server": "^1.2.0"
+  }
+}

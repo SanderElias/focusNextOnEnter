@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Quick tabfocus sample</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+</head>
+
+<body ng-app="nextEnter">
+    <div class="container col-md-6">
+
+        <form class="form-horizontal" role="form">
+            <h2>Demo Form</h2>
+            <p>Note that in this form the Enter-key behaves in a non-standard way!</p>
+            <div class="form-group">
+                <label for="firstName" class="col-sm-3 control-label">Full Name</label>
+                <div class="col-sm-9">
+                    <input type="text" id="firstName" placeholder="Full Name" class="form-control" autofocus focus-next>
+                    <span class="help-block">Last Name, First Name, eg.: Smith, Harry</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email" class="col-sm-3 control-label">Email</label>
+                <div class="col-sm-9">
+                    <input type="email" id="email" placeholder="Email" class="form-control" focus-next>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password" class="col-sm-3 control-label">Password</label>
+                <div class="col-sm-9">
+                    <input type="password" id="password" placeholder="Password" class="form-control" focus-next>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="birthDate" class="col-sm-3 control-label">Date of Birth</label>
+                <div class="col-sm-9">
+                    <input type="date" id="birthDate" class="form-control" focus-next>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="country" class="col-sm-3 control-label">Country</label>
+                <div class="col-sm-9">
+                    <select id="country" class="form-control" focus-next>
+                            <option>Afghanistan</option>
+                            <option>Bahamas</option>
+                            <option>Cambodia</option>
+                            <option>Denmark</option>
+                            <option>Ecuador</option>
+                            <option>Fiji</option>
+                            <option>Gabon</option>
+                            <option>Haiti</option>
+                        </select>
+                </div>
+            </div>
+            <!-- /.form-group -->
+            <div class="form-group">
+                <label class="control-label col-sm-3">Gender</label>
+                <div class="col-sm-6">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label class="radio-inline">
+                                    <input type="radio" id="femaleRadio" value="Female" focus-next>Female
+                                </label>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="radio-inline">
+                                    <input type="radio" id="maleRadio" value="Male" focus-next>Male
+                                </label>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="radio-inline">
+                                    <input type="radio" id="uncknownRadio" value="Unknown" focus-next>Unknown
+                                </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.form-group -->
+            <div class="form-group">
+                <label class="control-label col-sm-3">Meal Preference</label>
+                <div class="col-sm-9">
+                    <div class="checkbox">
+                        <label>
+                                <input type="checkbox" id="calorieCheckbox" value="Low calorie" focus-next>Low calorie
+                            </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                                <input type="checkbox" id="saltCheckbox" value="Low salt" focus-next>Low salt
+                            </label>
+                    </div>
+                </div>
+            </div>
+            <!-- /.form-group -->
+            <div class="form-group">
+                <div class="col-sm-9 col-sm-offset-3">
+                    <div class="checkbox">
+                        <label>
+                                <input type="checkbox" focus-next>I accept <a href="#" focus-next>terms</a>
+                            </label>
+                    </div>
+                </div>
+            </div>
+            <!-- /.form-group -->
+            <div class="form-group">
+                <div class="col-sm-9 col-sm-offset-3">
+                    <button type="submit" class="btn btn-primary btn-block" focus-next>Register</button>
+                </div>
+            </div>
+        </form>
+        <!-- /form -->
+    </div>
+    <script defer src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <script defer src="script.js"></script>
+</body>
+
+</html>
