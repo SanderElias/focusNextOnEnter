@@ -11,6 +11,24 @@
         }
     }
 
+    //es5 helper
+    function Es5TraverseAndFindFocusableElements(elm) {
+        var result = []
+        inspect(elm);
+        return result;
+
+        function inspect(elm) {
+            if (elm.tabIndex > -1) {
+                result.push(elm);
+            }
+            for (let child of [...elm.children]) {
+                inspect(child)
+            }
+        }
+    }
+
+
+
     function focusNext() {
         return {
             restrict: "A", //make it an attribute selector
@@ -33,7 +51,8 @@
                 if (ev.keyCode === 13) {
                     ev.preventDefault();
                     // utilize the above generator and ES6 spread to build an array of focusable elements
-                    let elmList = [...TraverseAndFindFocusableElements(document.body)];
+                    // now using an ES5 helper.
+                    let elmList = Es5TraverseAndFindFocusableElements(document.body);
                     let current = elmList.findIndex(n => n == el);
                     let next = Math.min(elmList.length - 1, current + 1);
                     if (ev.shiftKey) { //reverse on shift, make it on par with tab.
